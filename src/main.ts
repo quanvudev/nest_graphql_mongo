@@ -14,5 +14,7 @@ async function bootstrap() {
   );
 
   await app.listen(config().port);
+
+  console.log(config().port);
 }
 bootstrap();
