@@ -14,9 +14,7 @@ async function bootstrap() {
   );
 
   await app.listen(config().port, (err, addr) => {
-    if (err) {
-      console.error(err);
-    }
+    if (err) console.error(err);
     console.log(`Server listening on ${addr}`);
   });
 }
