@@ -13,7 +13,7 @@ async function bootstrap() {
     new FastifyAdapter({ logger: true }),
   );
 
-  await app.listen(config().port, (err, addr) => {
+  await app.listen(config().port, '0.0.0.0', (err, addr) => {
     if (err) console.error(err);
     console.log(`Server listening on ${addr}`);
   });
